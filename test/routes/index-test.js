@@ -1,7 +1,7 @@
 var assert = require('assert');
 var supertest = require('supertest');  
 var chai = require('chai');
-var uuid 	= require('uuid');
+var uuid = require('uuid');
 var app = require('../../app.js');
 var modelHero = require('../../models/hero');
 
@@ -16,9 +16,13 @@ describe('GET super-hero', function() {
 	
 	beforeEach(function(done) {
 		modelHero.create(query, function(err, dataHero) {
-			//modelHero.delete({_id:dataHero._id}, function(err, data) {
-				done();
-			//});
+			done();
+		});
+	});
+	
+	afterEach(function(done){
+		modelHero.delete({_id: query._id}, function(err, data) {
+			done();
 		});
 	});
 	

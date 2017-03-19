@@ -13,7 +13,7 @@ login.index = function(req, res, next) {
 		}
 		if(!_.isEmpty(data)) {
 			
-			var pass = true;//passwordHash.verify(req.body.password, data.password);
+			var pass = passwordHash.verify(req.body.password, data.password);
 			if(pass) {
 				var dados = {
 					username:data.username,
