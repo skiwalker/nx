@@ -47,7 +47,6 @@ function checkErrors(req, res, next) {
 						callback({message:result.message}, null);
 					} else {
 							var query = {name: result.data.username, adm: true};
-							console.log(query);
 							modelRole.findRole(query, function(err, data){
 							if(err){
 								throw err;

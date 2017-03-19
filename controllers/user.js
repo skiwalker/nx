@@ -13,7 +13,6 @@ user.create = function(req, res, next) {
 	
 	var id 	= uuid.v4();
 	var getToken = jwt.sign({ username: req.body.name, iat: Math.floor(Date.now() / 1000) - 30 }, 'nextel', { expiresIn: 1800 });
-	console.log(getToken);
 	var query = { _id: id, username: req.body.username, password: passwordHash.generate(req.body.password), token: getToken};
 	
 	async.waterfall([
