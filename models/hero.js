@@ -43,7 +43,6 @@ HeroModel.list = function(query, callback) {
 }
 
 HeroModel.getId = function(query, callback) {
-	console.log('aqio...');
 	db.collection('superHero').findOne(query, function(err, data) {
 	  if(err){
 			callback(err);
@@ -53,7 +52,6 @@ HeroModel.getId = function(query, callback) {
 }
 
 HeroModel.delete = function(query, callback) {
-	console.log(query);
 	db.collection('superHero').deleteOne(query, function(err, data) {
 	  if(err){
 			callback(err);

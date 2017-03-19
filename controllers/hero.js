@@ -33,7 +33,7 @@ hero.create = function(req, res, next) {
 			});
 		},
 		function(arg1, arg2, callback) {
-			var token = {username: req.headers.username, token: req.headers.token};
+			var token = {token: req.headers.token};
 			var queryAudit = {
 				entity: 'super-hero',
 				entityId: id,
@@ -71,7 +71,7 @@ hero.update = function(req, res, next) {
 			});
 		},
 		function(arg1, callback) {
-			var token = {username: req.headers.username, token: req.headers.token};
+			var token = {token: req.headers.token};
 			var queryAudit = {
 				entity: 'super-hero',
 				entityId: query._id,
@@ -111,7 +111,7 @@ hero.delete = function(req, res, next) {
 			});
 		},
 		function(arg1, callback) {
-			var token = {username: req.headers.username, token: req.headers.token};
+			var token = {token: req.headers.token};
 			var queryAudit = {
 				entity: 'super-hero',
 				entityId: query._id,

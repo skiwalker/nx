@@ -39,7 +39,7 @@ power.create = function(req, res, next) {
 			});
 		},
 		function(arg1, arg2, callback) {
-			var token = {username: req.headers.username, token: req.headers.token};
+			var token = {token: req.headers.token};
 			var queryAudit = {
 				entity: 'super-power',
 				entityId: id,
@@ -77,7 +77,7 @@ power.update = function(req, res, next) {
 			});
 		},
 		function(arg1, callback) {
-			var token = {username: req.headers.username, token: req.headers.token};
+			var token = {token: req.headers.token};
 			var queryAudit = {
 				entity: 'super-power',
 				entityId: query._id,
@@ -134,7 +134,7 @@ power.delete = function(req, res, next) {
 			});
 		},
 		function(arg2, callback) {
-			var token = {username: req.headers.username, token: req.headers.token};
+			var token = {token: req.headers.token};
 			var queryAudit = {
 				entity: 'super-power',
 				entityId: query._id,
