@@ -26,7 +26,7 @@ app.use(expressValidator());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-//app.use(cache('2 minutes'));
+app.use(cache('2 minutes'));
 
 
 app.use('/v1', index);
