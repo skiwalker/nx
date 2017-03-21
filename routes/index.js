@@ -26,25 +26,4 @@ router.get('/user', controllerUser.list);
 router.get('/user/:id', controllerUser.getId);
 router.delete('/user/:id', validation.userDelete, controllerUser.delete);
 
-
-//https://github.com/davidwood/node-password-hash
-/*
-1. Paginated List of SuperHeroes - ok
-2. Create SuperHero - ok
-3. Update SuperHero - ok
-4. Delete SuperHero - ok
-5. View single SuperHero - ok
-6. Paginated List of SuperPowers - ok
-7. Create SuperPower - ok
-8. Update SuperPower - ok
-9. Delete SuperPower a. If the superpower is associated to any superhero, the action has to be blocked - ok
-10. View single SuperPower - ok
-11. Paginated List of Users
-12. Create User - ok
-13. Update User - ok
-14. Delete User - ok
-15. Authenticate to the api - ok
-16. Subscribe to Audit (better detailed in the audit section)
-17. [BONUS] Help Me endpoint: send a location (latitude and longitude) and find up to 8 closest superheroes (in a 10km radius)
-*/
 module.exports = router;
